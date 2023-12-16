@@ -41,7 +41,8 @@ class GameBoard {
 
     }
 
-    checkAll() {
+    isAllSunk() {
+        if (this.shipCount === 0) return true;
     }
 }
 

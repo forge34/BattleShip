@@ -1,5 +1,4 @@
 import { GameBoard } from "../board";
-import { Ship } from "../ship";
 
 let GB = new GameBoard()
 
