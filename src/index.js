@@ -1,23 +1,24 @@
+import { GameBoard } from "./board";
 import { DOMclass } from "./dom";
 import "./style/main.css"
 
-let p1 = document.getElementById("b1")
-let p2 = document.getElementById("b2")
+const MainLoop = (() => {
+    let b1 = document.getElementById("b1") 
+    let b2 = document.getElementById("b2")
+    let Dom = new DOMclass()
+    let board1 = new GameBoard()
+    let board2 = new GameBoard()
 
-
-
-let dom =  new DOMclass()
-dom.createBoard(p1)
-dom.createBoard(p2)
-
-p1.addEventListener("click" , (e) => {
-    if(e.target.className === "cell"){
-        e.target.classList.add("ship")
+    const Setup = () => {
+        Dom.createBoard(b1)
+        Dom.createBoard(b2)
     }
-})
 
-p2.addEventListener("click" , (e) => {
-    if(e.target.className === "cell"){
-        e.target.classList.add("ship")
+    return {
+        Setup
     }
-})
+
+})();
+
+
+MainLoop.Setup()

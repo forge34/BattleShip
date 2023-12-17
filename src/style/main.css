@@ -3,12 +3,16 @@
     padding: 0;
 }
 
+body {
+    background-color: #6C71A5;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 50vw 50vw;
 }
 
-#bc1 , #b2c {
+#bc1 , #bc2 {
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -20,8 +24,11 @@
 }
 
 #bc2 {
-    grid-column: 2 / -1;
-    
+    grid-column: 2 / -1;   
+}
+
+#b1 , #b2 {
+    background-color: white;
 }
 
 .board {
@@ -43,4 +50,21 @@
 
 .ship {
     background-color: red;
+}
+
+.btn-container {
+    display: flex;
+}
+
+.btn {
+    font-size: 27px;
+    background-color: #4FFA5D;
+    border-radius: 7px;
+    border-style: none;
+    margin: 10px;
+    padding: 15px;
+}
+
+.btn:hover{
+    opacity: 0.75;
 }

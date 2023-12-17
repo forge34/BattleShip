@@ -12,6 +12,10 @@ class DOMclass {
             parent.append(div)
         }
     }
+
+    addShip(pos,board){
+
+    }
 }
 
 export {DOMclass}
