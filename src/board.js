@@ -11,11 +11,22 @@ class GameBoard {
                 this.board[`${l[i]}${j}`] = { missed: false, hit: false, ship: null }
             }
         }
+        this.onBoard = []
         this.shipCount = 0;
     }
 
     boardData(key) {
         return this.board[key]
+    }
+
+    alreadyOnBoard(ship){
+        if(this.onBoard.includes(ship)){
+            return true
+        }else return false
+    }
+
+    addOnBoard(ship){
+        this.onBoard.push(ship)
     }
 
     placeShip(posx, posy, type) {
@@ -24,10 +35,11 @@ class GameBoard {
         this.shipCount++
 
         for (let i = 0; i < ship.length; i++) {
-            if ((posy + i) <= 10) {
+            if ((posy + i) < 11) {
                 this.board[`${posx}${posy + i}`].ship = ship;
             }
         }
+        this.onBoard.push(type)
     }
 
     hasShip(pos) {
