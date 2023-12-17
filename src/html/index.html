@@ -7,28 +7,39 @@
 </head>
 <body>
     <div class="grid">
+
         <div id="bc1">
             <h1 >Player 1 Board</h1>
-            <div class="btn-container">
-                <button class="btn">Destroyer</button>
-                <button class="btn">Submarine</button>
-                <button class="btn">BattleShip</button>
-                <button class="btn">Carrier</button>
-                <button class="btn">Cruiser</button>
+
+            <div class="btn-container" id="btn-cont1">
+                <button class="btn" >Destroyer</button>
+                <button class="btn" >Submarine</button>
+                <button class="btn" >BattleShip</button>
+                <button class="btn" >Carrier</button>
+                <button class="btn" >Cruiser</button>
             </div>
+
+            <input type="text" placeholder="Enter coordinates" data-pl="0">
+            <button class="btn place" data-target="0">Place</button>
+
              <div class="board" id="b1">
                 
              </div>   
         </div>
+
         <div  id="bc2">
             <h1>Player 2 board</h1>
-            <div class="btn-container">
+            <div class="btn-container" id="btn-cont2" >
                 <button class="btn">Destroyer</button>
                 <button class="btn">Submarine</button>
                 <button class="btn">BattleShip</button>
                 <button class="btn">Carrier</button>
                 <button class="btn">Cruiser</button>
             </div>
+
+            <input type="text" placeholder="Enter coordinates" data-pl="1">
+            <button class="place btn" data-target="1">Place</button>
+
             <div class="board" id="b2">
                 
             </div>

@@ -24,8 +24,16 @@ class GameBoard {
         this.shipCount++
 
         for (let i = 0; i < ship.length; i++) {
-            this.board[`${posx}${posy + i}`].ship = ship;
+            if ((posy + i) <= 10) {
+                this.board[`${posx}${posy + i}`].ship = ship;
+            }
         }
+    }
+
+    hasShip(pos) {
+        if (this.boardData(pos).ship) {
+            return true
+        } else return false
     }
 
     recieveHit(posx, posy) {

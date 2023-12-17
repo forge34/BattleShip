@@ -13,6 +13,7 @@ body {
 }
 
 #bc1 , #bc2 {
+    margin: 10px;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -67,4 +68,12 @@ body {
 
 .btn:hover{
     opacity: 0.75;
+}
+
+input {
+    font-size: 30px;
+    border-radius: 7px;
+    border-style: none;
+    padding: 6px;
+    margin-top: 20px;
 }
