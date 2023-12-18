@@ -1,4 +1,8 @@
-let l = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+import { letters } from "./helper";
+/*
+
+TODO unecessary class , remove later
+ */
 class DOMclass {
     constructor(){
     }
@@ -10,7 +14,7 @@ class DOMclass {
                 div.classList.add("cell")
                 div.style.width = `77px`;
                 div.style.height = `77px`;
-                div.dataset.notation = `${l[i]}${j}`
+                div.dataset.notation = `${letters[i]}${j}`
                 parent.append(div)
             }
         }

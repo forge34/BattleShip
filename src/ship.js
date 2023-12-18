@@ -1,10 +1,4 @@
-let Type = {
-    "Cruiser":3,
-    "Carrier":5,
-    "Battleship":4,
-    "Submarine":3,
-    "Destroyer":2
-}
+import { Type } from "./helper";
 
 class Ship {
     #hit = 0;
